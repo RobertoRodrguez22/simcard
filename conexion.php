@@ -1,14 +1,14 @@
 <?php
-$conexion = mysqli_connect(
-  'localhost',
-  'root',
-  '',
-  'consolidado'
 
-);
+$conexion = new mysqli("localhost", "root", "", "consolidado");
 
-//if (isset($conn)) {
-//  echo 'db conectada';
-//}
+if (mysqli_connect_errno()) {
+   //echo "Error de conexion";
+    exit();
+}else
+{
+ echo "conexion establecida";
+}
 
 ?>
+
